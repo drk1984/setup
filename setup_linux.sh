@@ -36,6 +36,8 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 #node.js
 sudo apt-get install -y nodejs #installs node & npm
 sudo apt-get install -y rlwrap # this is read-line node repl
+sudo apt-get install npm
+npm config set registry http://registry.npmjs.org/
 sudo npm install -g jshint # what is the implication of -g global
 sudo npm install async request sleep twit
 sudo npm install restler accounting csv
