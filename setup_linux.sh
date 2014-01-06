@@ -45,7 +45,7 @@ sudo npm install restler accounting csv
 #Install nvm
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh 
 source $HOME/.nvm/nvm.sh
-sudo nvm install
+nvm install v0.10.24
 nvm use v0.10.24
 # To ensure clean nvm installation, remove following from 
 # .profile & put into .bashrc
