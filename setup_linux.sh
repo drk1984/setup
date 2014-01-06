@@ -33,20 +33,20 @@ sudo apt-get install emacs24 emacs24-el emacs24-common-non-dfsg
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-#node.js
-sudo apt-get install -y nodejs #installs node & npm
+#Install node/nvm & node repl
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh 
+source $HOME/.nvm/nvm.sh
+nvm install v0.10.24
+nvm use v0.10.24
 sudo apt-get install -y rlwrap # this is read-line node repl
+
+# Check if npm install is really necessary after doing node install through nvm
 sudo apt-get install npm
 npm config set registry http://registry.npmjs.org/
 sudo npm install -g jshint # what is the implication of -g global
 sudo npm install async request sleep twit
 sudo npm install restler accounting csv
 
-#Install nvm
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh 
-source $HOME/.nvm/nvm.sh
-nvm install v0.10.24
-nvm use v0.10.24
 # To ensure clean nvm installation, remove following from 
 # .profile & put into .bashrc
 #[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh 
