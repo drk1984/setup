@@ -40,14 +40,17 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 source $HOME/.nvm/nvm.sh
 nvm install v0.10.24
 nvm use v0.10.24
-sudo apt-get install -y rlwrap # this is read-line node repl
 
-# Check if npm install is really necessary after doing node install through nvm
-sudo apt-get install -y npm
-npm config set registry http://registry.npmjs.org/
-sudo npm install -g jshint # what is the implication of -g global
-sudo npm install async sleep twit
-sudo npm install restler accounting csv
+# Next two lines are not necessary if latest node version gets installed properly
+#sudo apt-get install -y npm
+#npm config set registry http://registry.npmjs.org/
+
+sudo apt-get install -y rlwrap # this is read-line node repl
+npm install -g jshint # what is the implication of -g global?
+
+# Additional node modules. Only install when necessary
+#npm install async sleep twit
+#npm install restler accounting csv
 
 # To ensure clean nvm installation, remove following from 
 # .profile & put into .bashrc
@@ -73,3 +76,4 @@ rm -f .profile
 rm -f .emacs
 
 ln -sf dotfiles/.emacs.d .
+source .bashrc
