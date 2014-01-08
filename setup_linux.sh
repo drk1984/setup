@@ -76,4 +76,5 @@ rm -f .profile
 rm -f .emacs
 
 ln -sf dotfiles/.emacs.d .
+#Run the line below again at command line if prompt doesn't change
 source .bashrc
