@@ -53,13 +53,20 @@ sudo npm install restler accounting csv
 ######### X ##############
 
 
-
 ####### User Customizations #######
 git clone https://github.com/drk1984/dotfiles.git
 #Link all dotfiles from ~ to /dotfiles directory using ln -sb
 # If using .emacs.d customizations, make sure to rm ~/.emacs
+cd $HOME
+
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
+
+if [ -d .emacs.d/ ]; then
+    mv .emacs.d .emacs.d~
+fi
+rm -f .emacs
+
 ln -sf dotfiles/.emacs.d .
