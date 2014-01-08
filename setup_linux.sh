@@ -16,7 +16,7 @@ sudo apt-get install -y python-software-properties python
 sudo apt-get install -y locate
 sudo apt-get install -y screen
 
-sudo apt-get install -y vim # Installs vi editor if necessary
+#sudo apt-get install -y vim # Installs vi editor if necessary
 
 #Install emacs after purging any existing versions
 # https://launchpad.net/~cassou/+archive/emacs
